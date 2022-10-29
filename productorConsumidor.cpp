@@ -78,9 +78,9 @@ void producir(){
 
 //Función del consumidor
 void consumir(){
+    int posicionConsumo = 0; //Variable que indica en que posición del buffer se quedo el consumo
+    int numeroConsumo = 0; //Variable que indica el número de veces que se ha consumido
     while (terminarEjecucion == false){
-        int posicionConsumo = 0; //Variable que indica en que posición del buffer se quedo el consumo
-        int numeroConsumo = 0; //Variable que indica el número de veces que se ha consumido
         sleep(1);
         sem_wait(&lleno); //dormir al consumidor cuando se termino de consumir 
         string msg = "\nThread-C Despertando ";
